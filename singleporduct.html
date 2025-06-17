@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Product Detail</title>
+  <link rel="stylesheet" href="css/singleproduct.css" />
+  <script src="https://kit.fontawesome.com/51b178be49.js" crossorigin="anonymous"></script>
+  <script src="js/main.js" defer></script>
+</head>
+<body>
+
+  <header>
+    <nav class="navagation">
+      <ul class="navagation__list">
+        <li>
+          <a class="nav__link" href="index.html">
+            <i class="fa-solid fa-house" id="home-page"></i>
+          </a>
+        </li>
+        <li>
+            <a href="shopping.html">
+                <i class="fa-solid fa-shopping-cart"></i>
+            </a>
+        </li>
+        <li>
+          <button class="light-mode_button" onclick="Lightmode()">
+            toggle light mode
+          </button>
+        </li>
+
+        <li>
+          <div class="search__container">
+            <input type="text" class="search__input" placeholder="Search" />
+            <button class="search__button">
+              <i class="fa-solid fa-magnifying-glass"></i>
+            </button>
+          </div>
+        </li>
+
+        <li>
+          <a class="nav__link" id="winkelmandje" href="#" data-items="0">
+            <i class="fa-solid fa-cart-shopping"></i>
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <div class="grid-container" >
+    <div class="card" id="product-card" >
+      <img id="product-image" class="card__image" src="img/white.jpeg" alt="White Tshirt" />
+      <h2 id="product-name" class="card__product-title"> White Tshirt</h2>
+      <p id="product-price" class="card__product-price">9.99$</p>
+      <p id="product-description" class="card__product-price">
+        
+      </p>
+      <p class="card__product-description">This is a premium product made with care. It features a comfortable fit and high-quality materials, ensuring durability and style. Perfect for everyday wear or special occasions, this product is designed to meet your needs and exceed your expectations.</p>
+      <a href="shopping.html" class="card__button">← Back to Shop</a>
+    </div>
+  </div>
+
+
+</body>
+</html>
