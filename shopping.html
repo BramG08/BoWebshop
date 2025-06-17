@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://kit.fontawesome.com/51b178be49.js" crossorigin="anonymous"></script>
+    <script src="js/main.js" defer></script>
+    <script src="js/product-data.js" defer></script>
+
+    <title>Shopping</title>
+</head>
+
+<header>
+
+ 
+    <nav class="navagation">
+        <ul class="navagation__list">
+            <li>
+                <a class="nav__link" href="index.html">
+                    <i class="fa-solid fa-house" id="home-page"></i>
+                </a>
+            </li>
+              <li>
+                <button class="light-mode_button" onclick="Lightmode()">
+                  toggle light mode
+                </button>
+            </li>
+            <li>
+               <search>
+                    <input type="text" class="search__input" placeholder="Search">
+                    <button class="search__button">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                    </button>
+                    
+               </search>
+            </li>
+            <li>
+                <a class="nav__link" id="winkelmandje" href="#" data-items="0">
+                    <i class="fa-solid fa-cart-shopping"></i>
+                                
+                </a>
+            </li>
+          
+
+        </ul>
+    </nav>
+
+
+</header>
+
+<body>
+    <main class="grid-container" id="grid-container">
+
+    <article class="grid-container__item" id="grid-container__item"> 
+        <div class="card">
+            <img class="card__img" src="" alt="Product Image">
+            <h2 class="card__product-title"></h2>
+            <p class="card__product-price"></p>
+            <a class="card__product-page" href="#">View product</a>
+             </button>
+            <button class="card__button">add to cart</button>
+            <button class="card__button--remove">remove from cart</button>
+        </div>
+
+    </article>
+
+    </main>
+</body>
+
+</html>
+
+
