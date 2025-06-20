@@ -28,8 +28,8 @@ header{
 }
 
 .light-mode_button{
-    background-color: white;
-    color: black;
+    background-color: black;
+    color: white;
     border: none;
     padding: 1rem 2rem;
     border-radius: 0.5rem;
@@ -79,8 +79,23 @@ header{
     font-size: 1.6rem;
 }
 
+#slider{
+    background-color: black;
+    height: 0.5rem;
+    appearance: none;
+}
+#slider::-webkit-slider-thumb{
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    appearance: none;
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    background-color: red;
+    border: 2px solid black;
+    cursor: pointer;
 
-
+}
 .search__input{
     color: black;
     background-color: white;

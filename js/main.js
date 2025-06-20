@@ -17,7 +17,10 @@ const producten = [
   { naam: 'Dark Jeans', prijs: 19.99, afbeelding: 'dark-jeans.jpeg' },
   { naam: 'Jacket', prijs: 49.99, afbeelding: 'jacket.jpeg' },
   { naam: 'Hat', prijs: 14.99, afbeelding: 'hat.jpeg' },
-  { naam: 'Baggy Joggers', prijs: 27.49, afbeelding: 'joggers.jpeg' }
+  { naam: 'Baggy Joggers', prijs: 27.49, afbeelding: 'joggers.jpeg' },
+  {naam: 'Sneakers', prijs: 79.99, afbeelding: 'sneakers.jpeg' },
+  {naam: 'belt', prijs: 19.99, afbeelding: 'belt.jpeg' },
+  {naam: 'Socks', prijs: 4.99, afbeelding: 'socks.jpeg' },
 ];
 
 function getCart() {
@@ -63,11 +66,13 @@ function removeFromCart(product) {
   }
 }
 
-function renderProducts(maxPrijs) {
+function renderProducts(maxPrijs, search) {
+  console.log(search)
   // Verwijder eerder gerenderde producten
   document.querySelectorAll('.grid-container__item:not(#grid-container__item)').forEach(el => el.remove());
 
-  const filtered = producten.filter(product => product.prijs <= maxPrijs);
+  const filtered = producten.filter(product => product.prijs <= maxPrijs)
+  .filter(product => product.naam.toLowerCase().includes(search.toLowerCase()));
 
   filtered.forEach(product => {
     const clone = gridContainerItem.cloneNode(true);
@@ -85,13 +90,18 @@ function renderProducts(maxPrijs) {
   });
 }
 
+
 document.addEventListener('DOMContentLoaded', () => {
   updateCartDisplay();
 
   const slider = document.getElementById("slider");
-  renderProducts(slider.value);
+  const searchbar = document.getElementById("searchbar");
+  renderProducts(slider.value, searchbar.value);
 
   slider.addEventListener("input", () => {
-    renderProducts(slider.value);
+    renderProducts(slider.value, searchbar.value);
+  });
+  searchbar.addEventListener("input", () => {
+    renderProducts(slider.value, searchbar.value);
   });
 });
